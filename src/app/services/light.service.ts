@@ -39,11 +39,11 @@ export class LightService {
     return this.lightArray;
   }
 
-  addLight(){
+  addLight(name: string){
     let light = {
       id : this.nextId,
       toggled: false,
-      title: 'Light ' + (this.lightArray.length + 1)
+      title: name
     };
     this.lightArray.push(light);
     this.nextId++;
