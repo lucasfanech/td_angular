@@ -17,7 +17,11 @@ import {FormsModule} from "@angular/forms";
   styleUrl: './lightpage.component.css'
 })
 export class LightpageComponent {
-  lightName: string = '';
+
+  light: any = {
+    name: "",
+    color: "#05b327"
+  }
 
   constructor(protected lightService: LightService) {}
 

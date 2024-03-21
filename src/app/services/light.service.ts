@@ -8,27 +8,32 @@ export class LightService {
     {
       id: 1,
       toggled: false,
-      title: 'Light 1'
+      title: 'Light 1',
+      color: '#f6b73c'
     },
     {
       id: 2,
       toggled: true,
-      title: 'Light 2'
+      title: 'Light 2',
+      color: '#f6b73c'
     },
     {
       id: 3,
       toggled: false,
-      title: 'Light 3'
+      title: 'Light 3',
+      color: '#f6b73c'
     },
     {
       id: 4,
       toggled: true,
-      title: 'Light 4'
+      title: 'Light 4',
+      color: '#f6b73c'
     },
     {
       id: 5,
       toggled: false,
-      title: 'Light 5'
+      title: 'Light 5',
+      color: '#f6b73c'
     }
   ];
 
@@ -39,11 +44,12 @@ export class LightService {
     return this.lightArray;
   }
 
-  addLight(name: string){
+  addLight(lightSent: any){
     let light = {
       id : this.nextId,
       toggled: false,
-      title: name
+      title: lightSent.name,
+      color: lightSent.color
     };
     this.lightArray.push(light);
     this.nextId++;

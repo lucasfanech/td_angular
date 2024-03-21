@@ -1,5 +1,5 @@
 <div class="flex flex-col justify-center items-center">
-  <div class="w-40 h-40 flex flex-col justify-center items-center transition ease-in-out rounded-3xl shadow-2xl border-2" [ngClass]="light.toggled ? 'bg-green-800' : 'bg-red-800'" (click)="switchLight(light)">
+  <div class="w-40 h-40 flex flex-col justify-center items-center transition ease-in-out rounded-3xl shadow-2xl border-2" [ngClass]="light.toggled ? '' : 'bg-red-800'" (click)="switchLight(light)" [ngStyle]="{background: light.toggled ? light.color : ''}">
     <div class="text-white font-bold">
       {{ light.toggled ? 'Allumé' : 'OFF'}}
     </div>

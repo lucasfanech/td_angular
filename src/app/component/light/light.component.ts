@@ -1,11 +1,12 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {NgClass} from "@angular/common";
+import {NgClass, NgStyle} from "@angular/common";
 
 @Component({
   selector: 'app-light',
   standalone: true,
   imports: [
-    NgClass
+    NgClass,
+    NgStyle
   ],
   templateUrl: './light.component.html',
   styleUrl: './light.component.css'
