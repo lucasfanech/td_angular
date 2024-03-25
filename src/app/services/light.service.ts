@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import {HttpClient} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
@@ -38,8 +39,15 @@ export class LightService {
   ];
 
   private nextId = 6;
-  constructor() { }
+  constructor(private httpClient: HttpClient) {
+    this.refreshLights();
+  }
 
+  refreshLights(){
+    this.httpClient.get('api/lights').subscribe((lights: any) => {
+      this.lightArray = lights;
+    })
+  }
   getAllLights() {
     return this.lightArray;
   }
