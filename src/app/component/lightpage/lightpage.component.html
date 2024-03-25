@@ -11,7 +11,7 @@
   </div>
   <div class="rounded overflow-auto shadow-lg bg-gray-100 border p-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
     <div class="" *ngFor="let light of lightService.getAllLights()">
-      <app-light [lightInput]="light" (trigger)="handleTrigger(light.id)"></app-light>
+      <app-light [lightInput]="light" (trigger)="handleTrigger(light.id)" (toggled)="switchLight(light)"></app-light>
     </div>
   </div>
 </div>
